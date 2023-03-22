@@ -1,6 +1,6 @@
 # Testing `astrotomic/laravel-translatable` package
 
-An ugly app with a translatable model.
+An ugly app with a translatable model aiming to get some hands-on experience with the `astrotomic/laravel-translatable` package.
 
 ## Installation
 
