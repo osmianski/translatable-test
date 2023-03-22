@@ -12,5 +12,6 @@ class Post extends Model
     use Translatable;
 
     public array $translatedAttributes = ['title', 'content'];
+    public $useTranslationFallback = true;
     protected $fillable = ['author'];
 }
