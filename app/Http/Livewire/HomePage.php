@@ -4,7 +4,6 @@ namespace App\Http\Livewire;
 
 use App\Models\Post;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
 use Livewire\Component;
 
 class HomePage extends Component
@@ -41,6 +40,7 @@ class HomePage extends Component
     public function updatedLocale($value): void
     {
         app()->setLocale($value);
+        session()->put('locale', $value);
     }
 
     public function save(): void
@@ -60,6 +60,6 @@ class HomePage extends Component
 
     protected function getPosts()
     {
-        return Post::get();
+        return Post::withTranslation()->get();
     }
 }
